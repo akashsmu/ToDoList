@@ -1,0 +1,91 @@
+body{
+    background-image: url("background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: rgba(25,25,25,0.7);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-arrow-left{
+    margin:2% 0 0 0;
+}
+
+
+
+h1{
+    text-align: center;
+    position: relative;
+    top:3rem;
+    font-size: 5em;
+}
+
+table{
+            border-collapse: collapse;
+            margin:auto;
+            font-size:1.2em;
+            width:1000px;
+            position:relative;
+            top:22%;
+            border-radius:10px 10px 0 0;
+            overflow:hidden;
+        }   
+
+table thead tr{
+            text-align:left;
+            font-weight:bold;
+            color:#000;
+            background-color: #fff;
+
+        }
+
+#deletes{
+    text-align:center;
+}
+table tbody td{
+    word-wrap:break-word;
+    max-width:1px;
+
+}
+
+
+table th,table td{
+    padding:12px 15px;
+}
+
+
+#del{
+    text-align: center;
+}
+
+
+
+
+table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even){
+    background-color:rgba(154,160,161,0.6);
+}
+
+table tbody tr:last-of-type{
+    border-bottom:2px solid #009879;
+}
+
+
+.fa-trash{
+    color:red;
+    margin:auto;
+}
+
+a{
+    text-decoration: none;
+    font-size:1.1em;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todos</title>
+    
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+    <style>
+         body{
+    background-image: url("background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(25,25,25,0.7);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+.navigation{
+    text-align: center;
+    background-color: transparent;
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    padding: 0.5em;
+    color: #fff;
+    font-size:20px;
+    background: rgba(53,61,170,0.7);
+    border-radius:5px;
+
+}
+
+nav a:hover{
+    color: rgb(240, 212, 163);
+    text-decoration: none;
+    background:transparent;
+    border-radius:5px;
+    border:2px solid rgb(240,212,163);
+}
+
+
+label{
+    color:white;
+    font-size:1.3em;
+}
+
+#main{
+    margin-top: 20rem;
+    font-size: 7rem;
+    margin-bottom: 1em;
+    color:#fff;
+}
+
+.buttons{
+   position: relative;
+   left:45%;
+
+}
+
+</style>
+</head>
+<body>
+    
+    <header class="navigation">
+        <nav>
+            <ul>
+                <li><a href="another.php">My ToDo List</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    <div>
+        <div class="container">
+            <h1 class="text-center display-4" id='main'>ToDo List</h1>
+            <div class="row">
+             <form class="col-8 mx-auto" id='forms' method='post'>
+                    <label> Activity</label>
+                    <div class="form-group">
+                        <input type="text" id='act' class="form-control" name='task' placeholder="Activity ToDo...">
+                    </div>
+                    <label> Deadline</label>
+                    <div class="form-group">
+                        <div class="input-group date" id="datetimepicker1">
+                            <input type="text" id='dt' class="form-control" name='datetime' placeholder="Date and Time.." onkeypress="return /[0-9]/i.test(event.key)" >
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                         
+                    </div>
+                    <span class='buttons'>
+                        <button type="submit" class="btn btn-primary" name='submit'>Submit</button>
+                        <button type='reset' class='btn btn-primary' id='clear' name='clear'> Clear </button>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $('#datetimepicker1').datetimepicker({
+                format:'YYYY-MM-DD hh:mm'
+            });
+        });
+
+    </script>
+</body>
+</html>
